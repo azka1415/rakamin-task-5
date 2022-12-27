@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+:root {
+	--black: #1e1e1e;
+	--gray: #3f3f3f;
+	--purple: #720060;
+	--pink: #fde2ff;
+	--lightblue: #d6e6ff;
+	--blue: #002772;
+	--lightgray: #dcdcdc;
+}
+
+* {
+	color: var(--black);
+	font-family: "Inter", sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	line-break: anywhere;
+}
+
+.home-loader {
+	position: absolute;
+	left: 48%;
+	top: 50%;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	width: 50px;
+}
+
+.loader-container {
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+	min-width: 1044px;
+	max-width: 1044px;
+	max-height: 580px;
+}
+
+.loader {
+	display: flex;
+	border: 16px solid #f3f3f3; /* Light grey */
+	border-top: 16px solid #3498db; /* Blue */
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	animation: spin 2s linear infinite;
+}
+
+.error-container {
+	padding: 0;
+	margin: 0;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+}
+
+.error {
+	position: relative;
+	left: 60px;
+	top: 100px;
+	width: 1028px;
+	height: 439px;
+	background: url("./assets/sad-face.svg") no-repeat;
+	background-size: 100%;
+}
+
+.error-btn {
+	position: relative;
+	bottom: 170px;
+	border: 3px solid var(--gray);
+}
+
+.error-container > p {
+	position: relative;
+	bottom: 183px;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+body {
+	display: flex;
+	background: #ffffff;
+	height: 100vh;
+	width: 100vw;
+}
+
+.App {
+	width: 100%;
+	margin: auto;
+	position: relative;
+	margin: 126px 43%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.bg-pattern-pink {
+	margin: 0;
+	padding: 0;
+	height: 548px;
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+	background: url("./assets/bg-pattern.svg") no-repeat;
+	background-size: 100%;
+	background-color: var(--pink);
+}
+
+.bg-pattern-blue {
+	margin: 0;
+	padding: 0;
+	height: 548px;
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+	background: url("./assets/bg-pattern.svg") no-repeat;
+	background-size: 100%;
+	background-color: var(--lightblue);
+}
+
+.bg-pattern-error {
+	margin: 0;
+	padding: 0;
+	height: 548px;
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+	background-color: var(--lightgray);
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	max-width: 1044px;
+	padding: 50px 56px;
+	border-radius: 10px;
+	gap: 68px;
+}
+
+span {
+	color: var(--gray);
+	font-size: 18px;
+}
+
+h1 {
+	font-size: 28px;
+	font-weight: 600;
+	margin-bottom: 25px;
+}
+
+.product-category {
+	justify-content: space-between;
+}
+
+.product-category,
+.product-rating {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+}
+
+.product-category {
+	padding-bottom: 11px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.product-main > p {
+	font-size: 20px;
+	font-weight: 400;
+}
+.product-main {
+	min-height: 242px;
+	margin-top: 26px;
+	padding-bottom: 10px;
+}
+.product-footer {
+	padding-top: 15px;
+	border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+	font: 28px;
+	font-weight: 600;
+}
+
+.product-buttons {
+	margin-top: 15px;
+	display: flex;
+	align-items: center;
+	gap: 19px;
+	justify-content: center;
+	text-align: center;
+	width: fit-content;
+}
+
+.buy-btn {
+	box-sizing: border-box;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+	padding: 11px 87px;
+	border-radius: 4px;
+}
+
+.buy-btn-blue {
+	background: var(--blue);
+}
+
+.buy-btn-purple {
+	background: var(--purple);
+}
+
+.next-btn {
+	box-sizing: border-box;
+	font-size: 20px;
+	font-weight: 600;
+	padding: 9px 66px;
+	border-radius: 4px;
+}
+
+.next-btn-blue {
+	color: var(--blue);
+	border: 3px solid var(--blue);
+}
+
+.next-btn-purple {
+	color: var(--purple);
+	border: 3px solid var(--purple);
+}
+
+.text-color-purple {
+	color: var(--purple);
+}
+
+.text-color-blue {
+	color: var(--blue);
+}
+
+.next-btn,
+.buy-btn {
+	cursor: pointer;
+}
+
+.product-image {
+	width: 100%;
+	max-width: 300px;
+}
